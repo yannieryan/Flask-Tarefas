@@ -1,12 +1,24 @@
-<!DOCTYPE html>
+<html>
 <head>
-    <title> Lista de Tarefas</title>
+    <title> Minhas Tarefas</title>
 </head>
 <body>
      Aqui fica a Lista de tarefas 
-     {{ lista }}
+
+    {% if lista %}
+        <ol>
+        {% for item in lista %}
+           <li>{{ item }}</li>
+           <a href= "/delete/{{loop.index0}}"><button>Feito</button></a>
+        {% endfor %}
+        </ol>
+    {% else %}
+        <p>Não há items! Parabéns! Você fez tudo das tarefas</p>
+    {% endif %}
+
      <form action="/add" method="post">
         <input type="text" name= nova>
         <button type="submit">Adicionar</button>
      </form>
 </body>
+</html>

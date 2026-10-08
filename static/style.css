@@ -1,0 +1,8 @@
+body{ 
+    background-color: rgb(240, 201, 118);
+}
+
+button{
+    background-color: rgb(25, 209, 25);
+    border: 1px solid rgba(5, 73, 36, 0.925)
+}
